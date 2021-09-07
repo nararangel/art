@@ -19,11 +19,11 @@ disabled: true
 
           {% if ext == '.jpg' %}
             <!-- <img src="{{file.path | replace_first: '_', '/' }}"></a> -->
-            {% comment %}
+
             {% responsive_image_block %}
               path: {{ file.path }}
             {% endresponsive_image_block %}
-            {% endcomment %}
+
           {% endif %}
           <!-- 
           {% if ext == '.mp4' %}
