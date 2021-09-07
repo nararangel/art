@@ -1,0 +1,21 @@
+/**
+ * layout related CSS
+ */
+
+.wrapper .container {
+    max-width: 100rem;
+}
+
+.post-content {
+    text-align: center;
+}
+
+/**
+ * override column size for mobile
+@media (max-width: 40.0rem) {
+    .row .column.column-33, .row .column.column-34 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+ */

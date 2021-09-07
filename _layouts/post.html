@@ -1,0 +1,43 @@
+---
+layout: default
+disabled: true
+---
+<div class="post">
+  {% include prev-next.html %}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+    {% assign projects = site.collections | where: "label", "projects" | first %}
+    {% assign project_contents_path = page.slug | append: "/conteudo/" %}
+    {% for file in projects.files %}
+      {% if file.path contains project_contents_path %}
+  
+          {% assign ext = file.extname | downcase %}
+
+          {% if ext == '.jpg' %}
+            <!-- <img src="{{file.path | replace_first: '_', '/' }}"></a> -->
+            {% comment %}
+            {% responsive_image_block %}
+              path: {{ file.path }}
+            {% endresponsive_image_block %}
+            {% endcomment %}
+          {% endif %}
+          <!-- 
+          {% if ext == '.mp4' %}
+          <div class="container">
+            <video controls>
+              <source src="{{file.path | replace_first: '_', '/' }}" type="video/mp4">
+              Please upgrade your browser to view video content.
+            </video>
+          </div>
+          {% endif %}
+          -->
+      {% endif %}
+    {% endfor %}
+  </article>
+
+  {% include prev-next.html %}
+</div>

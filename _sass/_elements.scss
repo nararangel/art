@@ -1,0 +1,83 @@
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $color-secondary;
+        }
+    }
+}
+
+.header-image {
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 150px;
+  width: 500px;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+/**
+ * Misc
+ */
+.preview-panel {
+    display: inline-block;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid $color-initial;
+    
+    &:hover {
+        border-radius: 5px;
+        border: 1px solid $grey-color-light;
+    }
+}
+
+.preview-project img {
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 30rem;
+  width: 30rem;
+}
+
+.site-header {
+    text-align: center;
+}
+
+.post-title {
+    display: block;
+}
+
+.prev-next {
+    overflow: auto;
+}
+
+.navbar {
+    display: block;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 1rem;
+}
+

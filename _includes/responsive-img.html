@@ -1,0 +1,9 @@
+{% assign largest = resized | sort: 'width' | last %}
+<script>console.log('{{ resized | jsonify }}');</script>
+{% capture srcset %}
+{% for i in resized %}
+    /{{ i.path | uri_escape }} {{ i.width }}w,
+{% endfor %}
+{% endcapture %}
+
+<img src="/{{ largest.path | uri_escape }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}">

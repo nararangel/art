@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+{% for project in site.projects %}
+    {% cycle 'add row' : '<div class="row">', '', '' %}
+        <div class="column">
+            <div class="preview-panel">
+                <a href="{{ project.url }}">
+                    <div class="preview-project">
+                        <script>console.log('_projects/{{ project.slug }}/{{ project.preview }}')</script>
+                        {% responsive_image_block %}
+                            path: _projects/{{ project.slug }}/{{ project.preview }}
+                        {% endresponsive_image_block %}
+                    </div>
+                	<div class="post-title">{{ project.title }}</div>
+                </a>
+           </div>
+        </div>
+	{% cycle 'end row' : '', '', '</div>' %}
+{% endfor %}
+{% cycle 'end row' : '', '<div class="column"></div><div class="column"></div></div>', '<div class="column"></div></div>' %}
