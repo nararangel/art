@@ -8,7 +8,6 @@ layout: page
             <div class="preview-panel">
                 <a href="{{ project.url }}">
                     <div class="preview-project">
-                        <script>console.log('_projects/{{ project.slug }}/{{ project.preview }}')</script>
                         {% responsive_image_block %}
                             path: _projects/{{ project.slug }}/{{ project.preview }}
                         {% endresponsive_image_block %}
