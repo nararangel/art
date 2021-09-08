@@ -1,6 +1,6 @@
 ---
 slug: da-serie-domestica
-title: Da série Doméstica
+title: Da Série Doméstica
 preview: conteudo/Da série doméstica - Cozinha/IMG_3983.JPG
 text: Da série Doméstica is a project for ..
 ---
