@@ -9,7 +9,7 @@ disabled: true
   </header>
 
   <article class="post-content">
-    {{ content }}
+    {% comment %} {{ content }} {% endcomment %}
     {% assign projects = site.collections | where: "label", "projects" | first %}
     {% assign project_contents_path = page.slug | append: "/conteudo/" %}
     {% for file in projects.files %}
@@ -25,16 +25,18 @@ disabled: true
             {% endresponsive_image_block %}
 
           {% endif %}
-          <!-- 
+
+          {% comment %}
           {% if ext == '.mp4' %}
-          <div class="container">
-            <video controls>
-              <source src="{{file.path | replace_first: '_', '/' }}" type="video/mp4">
-              Please upgrade your browser to view video content.
-            </video>
-          </div>
+            <div class="container">
+              <video controls>
+                <source src="{{file.path | replace_first: '_', '/' }}" type="video/mp4">
+                Please upgrade your browser to view video content.
+              </video>
+            </div>
           {% endif %}
-          -->
+          {% endcomment %}
+
       {% endif %}
     {% endfor %}
   </article>
